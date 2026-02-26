@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Groceries Home Delivery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Groceries Home Delivery</h1>
+      <p>Fresh essentials delivered to your doorstep in under an hour.</p>
+    </header>
+
+    <main class="layout">
+      <section class="card catalog">
+        <h2>Shop Groceries</h2>
+        <div id="product-grid" class="product-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="card cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items" class="cart-items"></ul>
+        <div class="cart-footer">
+          <p>Subtotal: <strong id="subtotal">$0.00</strong></p>
+          <p>Delivery Fee: <strong id="delivery-fee">$4.99</strong></p>
+          <p>Total: <strong id="total">$4.99</strong></p>
+        </div>
+      </section>
+
+      <section class="card checkout">
+        <h2>Delivery Details</h2>
+        <form id="checkout-form">
+          <label>
+            Full Name
+            <input id="name" name="name" type="text" required />
+          </label>
+          <label>
+            Address
+            <input id="address" name="address" type="text" required />
+          </label>
+          <label>
+            Phone
+            <input id="phone" name="phone" type="tel" required />
+          </label>
+          <label>
+            Delivery Window
+            <select id="window" name="window" required>
+              <option value="30-45 min">30-45 min</option>
+              <option value="45-60 min">45-60 min</option>
+              <option value="60-90 min">60-90 min</option>
+            </select>
+          </label>
+          <button type="submit">Place Order</button>
+        </form>
+        <p id="order-message" class="order-message" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
